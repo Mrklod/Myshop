@@ -15,3 +15,6 @@ class Products(models.Model):
     quantity = models.PositiveIntegerField(default=0)
     image = models.ImageField(upload_to='products_images')
     category = models.ForeignKey(Category,on_delete=models.PROTECT)
+
+    def __str__(self):
+        return self.name
